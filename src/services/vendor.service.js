@@ -43,7 +43,7 @@ module.exports = class VenderServices {
       if (sortField) {
         sortOptions[sortField] = sortOrder === "desc" ? -1 : 1;
       }
-      return vender.find(filter).skip(skip).limit(limit).sort(sortOptions);
+      // return vender.find(filter).skip(skip).limit(limit).sort(sortOptions);
     } catch (error) {
       console.log(error);
       return error.message;

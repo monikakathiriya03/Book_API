@@ -114,7 +114,7 @@ exports.deleteVender = async (req, res) => {
     if (!vender) {
       return sendBadResponse(res, 404, "Vender not found...");
     }
-    vender = await VenderService.deleteVender(venderId, req.body);
+    vender = await VenderService.updateVender(venderId, req.body);
     return sendSuccessResponse(res, 200, { vender }, "Vender Deleted...");
   } catch (error) {
     return sendErrorResponse(res, error, "Internal Server Error...");
